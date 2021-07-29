@@ -61,17 +61,37 @@ p {
   color: #26303b;
 }
 
-button.main {
-  height: 70px;
-  padding: 0 70px;
+button {
   background: linear-gradient(0deg, #7db945, #7db945);
-  border-radius: 10px;
   font-family: "Rotonda", sans-serif;
   font-weight: bold;
-  font-size: 22px;
-  line-height: 36px;
   color: white;
   border: none;
   cursor: pointer;
+
+  &.main {
+    height: 70px;
+    padding: 0 70px;
+    font-size: 22px;
+    line-height: 36px;
+    border-radius: 10px;
+  }
+
+  &.secondary {
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 7px;
+  }
+}
+
+input {
+  font-size: 16px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: #26303b;
+  background: #f3f4f6;
+  font-family: "Rotonda", sans-serif;
 }
 </style>

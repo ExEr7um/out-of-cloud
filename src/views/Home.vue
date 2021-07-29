@@ -18,8 +18,11 @@
           description="первого заказа"
         />
       </div>
-      <button class="main open-popup">К покупкам</button>
+      <button class="main open-popup" @click="isPopupOpened = true">
+        К покупкам
+      </button>
     </div>
+    <Popup v-if="isPopupOpened" @close="isPopupOpened = false" />
   </div>
 </template>
 
@@ -27,12 +30,14 @@
 // @ is an alias to /src
 import Slider from "@/components/Slider.vue";
 import Coupon from "@/components/Coupon.vue";
+import Popup from "@/components/Popup.vue";
 
 export default {
   name: "Home",
   components: {
     Slider,
     Coupon,
+    Popup,
   },
   data() {
     return {
@@ -68,6 +73,7 @@ export default {
           photo: require("@/assets/photos/photo_slide-5.png"),
         },
       ],
+      isPopupOpened: false,
     };
   },
 };
