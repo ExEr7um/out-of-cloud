@@ -38,17 +38,16 @@ body {
 
 // Текстовые стили
 h2 {
-  font-family: "Rotonda";
+  font-family: "Rotonda", sans-serif;
   font-weight: bold;
   font-size: 36px;
   line-height: 46px;
-  text-align: center;
   color: #26303b;
   max-width: 640px;
 }
 
 h4 {
-  font-family: "Rotonda";
+  font-family: "Rotonda", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #26303b;
@@ -56,9 +55,23 @@ h4 {
 }
 
 p {
-  font-family: "Rotonda";
+  font-family: "Rotonda", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #26303b;
+}
+
+button.main {
+  height: 70px;
+  padding: 0 70px;
+  background: linear-gradient(0deg, #7db945, #7db945);
+  border-radius: 10px;
+  font-family: "Rotonda", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 36px;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 </style>
