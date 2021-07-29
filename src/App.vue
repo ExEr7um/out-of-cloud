@@ -1,32 +1,64 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: "Rotonda";
+  src: url("./assets/fonts/RotondaC.eot");
+  src: url("./assets/fonts/RotondaC.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/RotondaC.woff") format("woff"),
+    url("./assets/fonts/RotondaC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-#nav {
-  padding: 30px;
+@font-face {
+  font-family: "Rotonda";
+  src: url("./assets/fonts/RotondaC-Bold.eot");
+  src: url("./assets/fonts/RotondaC-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/RotondaC-Bold.woff") format("woff"),
+    url("./assets/fonts/RotondaC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  background: #f7f7f7;
+}
+
+// Текстовые стили
+h2 {
+  font-family: "Rotonda";
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: #26303b;
+  max-width: 640px;
+}
+
+h4 {
+  font-family: "Rotonda";
+  font-size: 16px;
+  line-height: 24px;
+  color: #26303b;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Rotonda";
+  font-size: 16px;
+  line-height: 24px;
+  color: #26303b;
 }
 </style>

@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="slider-container">
+      <h2>Взгляните на процесс сборки своими глазами</h2>
+      <Slider />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Slider from "@/components/Slider.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
+    Slider,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 29px;
   }
 }
-</script>
+</style>

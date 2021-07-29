@@ -1,0 +1,13 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nnpm run build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nnpm run serve"
+    }
+  },
+  "identifier" : "C8EE83FB-1C7C-420B-9A05-9CDA86A80CC7"
+}
