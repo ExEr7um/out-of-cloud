@@ -6,9 +6,17 @@
     </div>
     <div class="coupons-container">
       <div class="coupons">
-        <Coupon />
+        <Coupon
+          :icon="require('@/assets/icn_discount.svg')"
+          :title="{ row1: 'Скидка', row2: '1500 ₽' }"
+          description="-500 ₽ на первые три заказа по промокоду NEW"
+        />
         <h2 class="plus">+</h2>
-        <Coupon />
+        <Coupon
+          :icon="require('@/assets/icn_truck.svg')"
+          :title="{ row1: 'Бесплатная', row2: 'доставка' }"
+          description="первого заказа"
+        />
       </div>
       <button class="main open-popup">К покупкам</button>
     </div>

@@ -1,17 +1,34 @@
 <template>
   <div class="coupon">
     <div class="icon-container">
-      <img src="@/assets/icn_discount.svg" />
+      <img :src="icon" />
     </div>
     <div class="text">
-      <h2>Скидка<br /><span>1500 ₽</span></h2>
-      <p>-500 ₽ на первые три заказа по промокоду NEW</p>
+      <h2>
+        {{ title.row1 }}<br /><span>{{ title.row2 }}</span>
+      </h2>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    icon: {
+      type: null,
+      default: null,
+    },
+    title: {
+      type: Object,
+      default: null,
+    },
+    description: {
+      type: String,
+      default: null,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
