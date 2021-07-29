@@ -94,4 +94,16 @@ input {
   background: #f3f4f6;
   font-family: "Rotonda", sans-serif;
 }
+
+@media (max-width: 950px) {
+  h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 </style>

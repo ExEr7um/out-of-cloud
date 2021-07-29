@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <div class="change-slide left" @click="desiredSlide -= 1">
+    <div class="change-slide desktop left" @click="desiredSlide -= 1">
       <img src="@/assets/icn_arrow-left.svg" alt="<" />
     </div>
     <div class="slide">
@@ -18,8 +18,16 @@
         </p>
       </div>
     </div>
-    <div class="change-slide right" @click="desiredSlide += 1">
+    <div class="change-slide desktop right" @click="desiredSlide += 1">
       <img src="@/assets/icn_arrow-left.svg" alt=">" />
+    </div>
+    <div class="mobile-slide-changer">
+      <div class="change-slide left" @click="desiredSlide -= 1">
+        <img src="@/assets/icn_arrow-left.svg" alt="<" />
+      </div>
+      <div class="change-slide right" @click="desiredSlide += 1">
+        <img src="@/assets/icn_arrow-left.svg" alt=">" />
+      </div>
     </div>
   </div>
 </template>
@@ -57,12 +65,20 @@ export default {
   align-items: center;
 
   .change-slide {
-    margin: 0 30px;
     cursor: pointer;
+    display: flex;
+
+    &.desktop {
+      margin: 0 30px;
+    }
 
     &.right {
       transform: rotate(180deg);
     }
+  }
+
+  .mobile-slide-changer {
+    display: none;
   }
 
   .slide {
@@ -85,6 +101,8 @@ export default {
 
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .number {
@@ -109,6 +127,44 @@ export default {
       margin-top: 28px;
       text-align: center;
       max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .slider {
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 20px;
+
+    .mobile-slide-changer {
+      margin-top: 33px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .change-slide.desktop {
+      display: none;
+    }
+
+    .slide {
+      height: 350px;
+      width: 100%;
+      max-width: 450px;
+      padding: 20px;
+
+      .photo {
+        height: 160px;
+        width: 100%;
+      }
+
+      .number {
+        width: 40px;
+        height: 40px;
+        left: -8px;
+        top: -9px;
+      }
     }
   }
 }

@@ -103,14 +103,32 @@ export default {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-
-    .plus {
-      margin: 0 40px;
-    }
+    gap: 40px;
   }
 
   .open-popup {
     width: 340px;
+  }
+}
+
+@media (max-width: 950px) {
+  .slider-container {
+    margin-bottom: 50px;
+  }
+
+  .coupons-container {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .coupons {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .open-popup {
+      max-width: 340px;
+      width: 100%;
+    }
   }
 }
 </style>

@@ -38,6 +38,7 @@ export default {
   height: 217px;
   display: flex;
   padding: 30px 10px 24px 30px;
+  gap: 30px;
 
   .icon-container {
     width: 70px;
@@ -50,8 +51,6 @@ export default {
   }
 
   .text {
-    margin-left: 30px;
-
     h2 {
       margin: 11px 0;
 
@@ -62,6 +61,30 @@ export default {
 
     p {
       width: 250px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .coupon {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 30px 30px 24px;
+    align-items: center;
+    gap: 20px;
+
+    .text {
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 }

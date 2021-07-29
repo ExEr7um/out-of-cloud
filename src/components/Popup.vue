@@ -70,6 +70,7 @@ export default {
 
       .input-container {
         margin-bottom: 30px;
+        width: 100%;
 
         input {
           margin-top: 5px;
@@ -84,6 +85,17 @@ export default {
       right: 20px;
       color: #26303b;
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .popup-bg .popup {
+    width: calc(100% - 40px);
+    padding: 30px;
+
+    form .input-container input {
+      width: 100%;
     }
   }
 }
