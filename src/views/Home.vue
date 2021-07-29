@@ -2,7 +2,7 @@
   <div class="home">
     <div class="slider-container">
       <h2>Взгляните на процесс сборки своими глазами</h2>
-      <Slider />
+      <Slider :slides="slides" />
     </div>
     <div class="coupons-container">
       <div class="coupons">
@@ -25,6 +25,42 @@ export default {
   components: {
     Slider,
     Coupon,
+  },
+  data() {
+    return {
+      slides: [
+        {
+          title: "Привезём точно по списку",
+          description:
+            "Сборщик берëт с собой наручный терминал, на котором он видит весь список покупок для каждого заказа.",
+          photo: require("@/assets/photos/photo_slide-1.png"),
+        },
+        {
+          title: "Собираем быстро и эффективно",
+          description:
+            "Для улучшения эргономики пространства товары размещены от тяжëлых к лëгким, находящимся уже в конечной зоне упаковки.",
+          photo: require("@/assets/photos/photo_slide-2.png"),
+        },
+        {
+          title: "За свежесть и качество отвечаем",
+          description:
+            "Выделены специальные зоны, в том числе холодная и морозильная.",
+          photo: require("@/assets/photos/photo_slide-3.png"),
+        },
+        {
+          title: "Шампунь не положат рядом с рыбой",
+          description:
+            "Собираем и упаковываем ваш заказ с заботой: соблюдаем принципы товарного соседства и учитываем вес товара.",
+          photo: require("@/assets/photos/photo_slide-4.png"),
+        },
+        {
+          title: "Довезëм в сохранности даже яйца",
+          description:
+            "Бережно транспортируем контейнеры, фиксируя их стяжными ремнями. Системы охлаждения поддерживают температурный режим.",
+          photo: require("@/assets/photos/photo_slide-5.png"),
+        },
+      ],
+    };
   },
 };
 </script>

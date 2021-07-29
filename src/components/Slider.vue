@@ -1,28 +1,54 @@
 <template>
   <div class="slider">
-    <div class="change-slide left">
+    <div class="change-slide left" @click="desiredSlide -= 1">
       <img src="@/assets/icn_arrow-left.svg" alt="<" />
     </div>
     <div class="slide">
-      <div class="video">
-        <div class="number">1</div>
+      <div class="photo">
+        <img
+          :src="slides[currentSlide].photo"
+          :alt="slides[currentSlide].title"
+        />
+        <div class="number">{{ currentSlide + 1 }}</div>
       </div>
       <div class="text">
-        <h4>Привезём точно по списку</h4>
+        <h4>{{ slides[currentSlide].title }}</h4>
         <p>
-          Сборщик берëт с собой наручный терминал, на котором он видит весь
-          список покупок для каждого заказа.
+          {{ slides[currentSlide].description }}
         </p>
       </div>
     </div>
-    <div class="change-slide right">
+    <div class="change-slide right" @click="desiredSlide += 1">
       <img src="@/assets/icn_arrow-left.svg" alt=">" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    slides: {
+      type: Array,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      currentSlide: 0,
+      desiredSlide: 0,
+    };
+  },
+  watch: {
+    desiredSlide: function () {
+      if (this.desiredSlide > this.slides.length - 1) {
+        this.desiredSlide = 0;
+      } else if (this.desiredSlide < 0) {
+        this.desiredSlide = this.slides.length - 1;
+      }
+      this.currentSlide = this.desiredSlide;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,11 +76,16 @@ export default {};
     align-items: center;
     padding: 40px 40px 10px;
 
-    .video {
+    .photo {
       width: 560px;
       height: 284px;
       background: #c4c4c4;
       position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
 
       .number {
         width: 50px;
